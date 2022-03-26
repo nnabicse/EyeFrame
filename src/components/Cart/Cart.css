@@ -1,5 +1,4 @@
-.cart{
-    position: sticky;
-    top: 0%;
-    padding: 30px 20px;
+.cart-item{
+    background-color: rgba(255, 0, 0, 0.103);
+    border-radius: 20px;
 }

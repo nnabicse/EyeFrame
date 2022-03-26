@@ -21,10 +21,8 @@ const Shop = () => {
     const handleChooseOne = (cart) =>{
         const randomNumber = Math.floor(Math.random() * cart.length);
         const randomProduct = cart[randomNumber];
-        console.log(randomProduct)
         const newCart = [];
         newCart.push(randomProduct)
-        console.log(newCart)
         setCart(newCart)
         
 
@@ -36,33 +34,35 @@ const Shop = () => {
     }
 
     return (
-        <div className='shop-container'>
-            <div className='products-container row row-cols-1 row-cols-md-3 g-4'>
-                {
-                    products.map(product=><Product
-
-                        key = {product.id}
-                        handleAddToCart = {handleAddToCart}
-                        product = {product}
-                    
-                    ></Product>)
-                }
-
-            </div>
-            <div className='cart-container'>
+        <div className='container my-3 overflow-hidden'>
+            <div className='row justify-content-md-center mx-0'>
+            <div className='col col-sm-12 col-md-3 col-lg-3  a'>
+                <div className='cart-container'>
+                <h4 className='fw-bolder text-center p-2 mt-1'>Order Summary</h4>
+                <div className='my-5'>
                 {
                     cart.map(product=><Cart product={product}></Cart>)
                 }
-                <div>
-                <button onClick={()=>handleChooseOne (cart)} className='
-                btn btn-lg bg-primary mb-3'>Choose One</button>
                 </div>
-                <div>
-                <button onClick={handleReset} className='btn btn-lg bg-primary'>Reset</button>
+                <div className='row p-2 m-auto'>
+                <button onClick={()=>handleChooseOne (cart)} className='
+                btn btn-sm w-75 m-auto mb-3 cart-button fw-bold'><p>Choose One</p></button>
+                <button onClick={handleReset} className='btn btn-sm w-75 m-auto cart-button mb-3 fw-bold'><p>Reset Cart</p></button>
+                </div>
                 </div>
             </div>
-
+            <div className='row col col-sm-12 col-md-9 col-lg-9 mx-0 product-container a'>
+                {
+                    products.map(product=><Product
+                        key = {product.id}
+                        handleAddToCart = {handleAddToCart}
+                        product = {product}                  
+                    ></Product>)
+                }
+            </div>
         </div>
+    </div>
+
     );
 };
 
