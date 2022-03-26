@@ -54,7 +54,9 @@ const Shop = () => {
                 <h4 className='fw-bolder text-center p-2 mt-1'>Order Summary</h4>
                 <div className='my-2'>
                 {
-                    cart.map(product=><Cart product={product}></Cart>)
+                    cart.map(product=><Cart 
+                        key = {product.id}
+                        product={product}></Cart>)
                 }
                 </div>
                 <div className='row p-2 m-auto'>
