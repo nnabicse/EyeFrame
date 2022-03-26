@@ -66,7 +66,7 @@ const Shop = () => {
                 </div>
                 </div>
             </div>
-            <div className='row col col-sm-12 col-md-9 col-lg-9 mx-0 product-container'>
+            <div className='row col col-sm-12 col-md-9 col-lg-9 mx-0 product-container my-3'>
                 {
                     products.map(product=><Product
                         key = {product.id}
