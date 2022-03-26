@@ -6,7 +6,7 @@
 
 ## Live Link
 
-Check the live view of this site from this link: [EyeFrame](https://eyeframe.netlify.app/)
+Check the live view of this site from this link: [https://eyeframe.netlify.app/](https://eyeframe.netlify.app/)
 
 <!-- Project Description -->
 
