@@ -19,11 +19,16 @@ const Shop = () => {
     }
 
     const handleChooseOne = (cart) =>{
-        const randomNumber = Math.floor(Math.random() * cart.length);
-        const randomProduct = cart[randomNumber];
-        const newCart = [];
-        newCart.push(randomProduct)
-        setCart(newCart)
+        if(cart.length === 0){
+            alert("Please Select Some Products")
+        }
+        else{
+            const newCart = [];
+            const randomNumber = Math.floor(Math.random() * cart.length);
+            const randomProduct = cart[randomNumber];
+            newCart.push(randomProduct)
+            setCart(newCart)
+        }
         
 
     }
